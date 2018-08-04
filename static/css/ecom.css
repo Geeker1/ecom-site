@@ -9,12 +9,15 @@ h6 {
     animation-duration: 3s;
 }
 
-html,
-body {
-  height: 100%;
+.ntseen{
+    visibility: hidden;
 }
 
 
+
+main .cat .products .detail{
+    height:200px;
+}
 
 div .detail:hover{
     background-color: rgb(104, 105, 105);color: white;
@@ -191,6 +194,7 @@ main .cat .products a:hover {
     color: rgb(163, 77, 77);
 }
 
+
 .centered {
     position: absolute;
     top: 50%;
@@ -314,6 +318,15 @@ footer div .social a:hover {
         padding: 10px;
     }
 
+    .container .cat .products{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 0px;
+
+    }
+    
+
     .container .made{
         width: 100%;
         box-sizing: border-box;
@@ -327,9 +340,18 @@ footer div .social a:hover {
         border-bottom: 1px solid #dee2e6 !important;
       }
 
-    section .services{
-        height:750px;
+    .divhigh{
+        border-top: 1px solid #dee2e6 !important;
     }
+
+    .divlowdark{
+        border-bottom: 1px solid #14181b !important;
+    }
+    .divhighdark{
+        border-top:1px solid #14181b !important;
+    }
+
+    
 
     section div .deli{
         margin-top:50px;
@@ -463,6 +485,13 @@ footer div .social a:hover {
         padding-left: 30px;
         padding-right: 30px;
     }
+    .container .cat .products{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 0px;
+
+    }
     div .add {
         display: none;
     }
@@ -478,6 +507,7 @@ footer div .social a:hover {
     main .cat div .detail img {
         height: 100%;
     }
+    
     main .cat div .detail {
         height: 80px;
     }

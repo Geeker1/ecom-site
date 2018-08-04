@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center mb-5">
+    <style>
+        main{
+          margin-top:10rem;
+        }
+        </style>
+
+  <main role="main" class="inner cover">
+    
+                <form id="ledum" class="searchform w-100 justify-content-center" action="{% url 'search' %}" method="GET">
+                    <input type="text" class="form-control col-lg-7 mb-2 mx-auto" name="q" placeholder="What are you looking for? Search Here..."/>
+                    <button type="submit" class="btn btn-primary btn-md">Search</button>
+                </form>
+            <div class="appendform container"></div>
+            
+        </nav>
+  </main>
+
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}

@@ -1,0 +1,45 @@
+<style>
+    div .detail button{
+    background-color: rgb(10, 10, 10);
+    border-color: rgb(12, 12, 12);
+    border-radius: 0px;
+    color: white;
+}
+div .detail button:hover {
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+    outline-color: none;
+}
+
+div .btn-code:hover, .btn-code:active, .btn-code:focus {
+    background-color: rgb(10, 10, 10);
+    border-color: rgb(12, 12, 12);
+    border-radius: 0px;
+    color: white;
+    outline: none !important;
+  }
+</style>
+
+
+<div class="trends row" style="padding:0px;height:100%;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:100%;">
+      <div class="pro row scroll-animations text-center" id="detail">
+          {% for cat in object_list %}
+          <div class="products">
+              <div class="animated detail" id="endme">
+                  <a href="{{ cat.get_absolute_url }}"><img class="img-responsive" src="{% if cat.image %}{{ cat.image.url }}{% else %}
+                      {{ cat.urlimage }}{% endif %}" alt=""></a>
+                  <h5 class="title py-1 mb-0"><a href="{{ cat.get_absolute_url }}" style="color:black;"> {{ cat.name }}</a></h5>
+                  <p class="price mt-1 mb-0">₦{{ cat.price }}
+                      <small style=" text-decoration:line-through;">₦{{ cat.slashed }}</small>
+                  </p>
+                  <button class="btn btn-code searchbtn"><a class="text-white" href="{{ cat.get_absolute_url }}">Buy Now</a></button>
+              </div>
+          </div>
+          {% empty %}
+          <p class="mt-5 text-danger mx-auto">No products found in our catalog</p>
+          {% endfor %}
+      </div>
+  </div>
+</div>

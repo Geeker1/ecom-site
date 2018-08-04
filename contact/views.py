@@ -33,9 +33,7 @@ def contact_save(request):
                 return HttpResponse('Invalid Header Found!!')
             form = ContactForm()
         else:
-            data['form_is_valid'] = False
-            
-                
+            data['form_is_valid'] = False  
     else:
         form = ContactForm()
     

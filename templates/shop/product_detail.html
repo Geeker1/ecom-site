@@ -1,23 +1,10 @@
 {% extends 'base.html' %} {% load static %} 
-{% block javascript %}
 
-
-
-
-
-
-<script src="{% static 'js/cart.js' %}"></script>
-
-
-
-
-{% endblock %}
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/product.css' %}" /> {% endblock %} {% block content %}
 
-
-<div class="pman container h-100" style="margin-top:100px;"><div id="snackbar">Added to Cart</div>
+<div class="pman container" style="margin-top:4rem;"><div id="snackbar">Added to Cart</div>
 
     <ol class="breadcrumb arr-right bg-dark w-100 py-2 px-1 mt-2 " style="font-size:13px;">
 

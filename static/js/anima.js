@@ -1,6 +1,9 @@
 $(document).ready(function() {
     // Check if element is scrolled into view
-
+    $('.scroll-animations .animated').addClass('ntseen');
+    $('.scroll-animas .animated').addClass('ntseen');
+    $('.scroll-anime .animated').addClass('ntseen');
+    $('.scrollinus .animated').addClass('ntseen');
     $('.navbar-nav .nav-item').hover(
       function(){
         $(this).addClass('rubberBand');
@@ -9,7 +12,6 @@ $(document).ready(function() {
         $(this).removeClass('rubberBand');
       }
     );
-
 
     function isScrolledIntoView(elem) {
       var docViewTop = $(window).scrollTop();
@@ -24,25 +26,30 @@ $(document).ready(function() {
     $(window).scroll(function() {
       $('.scroll-animations .animated').each(function() {
         if (isScrolledIntoView(this) === true) {
+          $(this).removeClass('ntseen');
           $(this).addClass('flipInY');
         }
       });
       $('.scroll-animas .animated').each(function() {
         if (isScrolledIntoView(this) === true) {
+          $(this).removeClass('ntseen');
           $(this).addClass('zoomIn');
         }
       });
       $('.scroll-anime .animated').each(function() {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('fadeInUp');
+          $(this).removeClass('ntseen');
+          $(this).addClass('zoomInUp');
         }
       });
       $('.scrollinus .animated').each(function() {
         if (isScrolledIntoView(this) === true) {
+          $(this).removeClass('ntseen');
           $(this).addClass('fadeInRight');
         }
       });
     });
+    
   });
 
 

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.conf.urls import url, static,include,handler400,handler500
+from django.conf.urls import url, static,include,handler404,handler500
 from django.contrib import admin
 import cart
 from shop import views
@@ -36,6 +36,8 @@ urlpatterns = [
     url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^coupons/',include('coupons.urls', namespace='coupons')),
     url(r'^$', views.home, name='home' ),
+    url(r'^search/', views.search, name="search"),
+    url(r'^searching/', views.searching, name="searching"),
     url(r'^signup/$', accounts_views.signup, name='signup'),
     url(r'^login/$', auth_views.LoginView.as_view(
         template_name='accounts/login.html'),  name='login'),
@@ -73,3 +75,5 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT)
 
+handler404 = "shop.views.page_not_found"
+handler500 = "shop.views.server_error"

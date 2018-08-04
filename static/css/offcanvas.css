@@ -52,9 +52,10 @@ body {
     position: fixed;
     top: 56px; /* Height of navbar */
     bottom: 0;
-    width: 75%;
-    height:70%;
+    width: 80%;
+    height:75%;
     padding-right: 1rem;
+    z-index:2000;
     padding-left: 1rem;
     overflow-y: auto;
     background-color: var(--gray-dark);
@@ -69,8 +70,8 @@ body {
   .offcanvas-collapse.open {
     -webkit-transform: translateX(-1rem);
     transform: translateX(-1rem); /* Account for horizontal padding on navbar */
-    width:75%;
-    height:70%;
+    width:80%;
+    height:75%;
     padding-right: 1rem;
     padding-left: 1rem;
   }
